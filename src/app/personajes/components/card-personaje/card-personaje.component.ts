@@ -28,4 +28,8 @@ export class CardPersonajeComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  verDetalles(){
+    this.selectedPersonaje.emit(this.dataInput);
+  }
+
 }

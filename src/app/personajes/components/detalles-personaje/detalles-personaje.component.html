@@ -1,1 +1,52 @@
-<p>detalles-personaje works!</p>
+<ng-template #modalDetallePersonaje>
+  <div class="modal-content">
+    <div class="modal-body">
+      <div class="col-12">
+          <div class="card mt-4 shadow mb-4">
+            <div class="card-header d-flex flex-row align-items-center justify-content-between">
+              {{ personaje.fullName | uppercase}}
+            </div>
+            <div class="card-body">
+              <img class="card-img-top img-fluid" [src]="personaje.imageUrl"/>
+              <form autocomplete="off" >
+
+                <div class="form-group row">
+                    <label class="col-2 col-form-label">Nombre</label>
+                    <div class="col-8">
+                        <input
+                        type="text"
+                        placeholder="personaje.firstName"
+                        formControlName="nombre">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-2 col-form-label">Apellido</label>
+                    <div class="col-8">
+                        <input type="text" placeholder="personaje" formControlName="apellido">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label class="col-2 col-form-label">Título</label>
+                    <div class="col-8">
+                        <input type="text" placeholder="Título" formControlName="titulo">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-2 col-form-label">Familia</label>
+                    <div class="col-8">
+                        <input type="text" placeholder="Familia" formControlName="familia">
+                    </div>
+                </div>
+            </form>
+            </div>
+          </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" aria-label="Close" (click)="cerrarModalDetallePersonaje()"
+          data-dismiss="modal">Cerrar
+      </button>
+    </div>
+  </div>
+</ng-template>

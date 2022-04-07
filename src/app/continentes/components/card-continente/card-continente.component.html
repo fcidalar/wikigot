@@ -1,0 +1,9 @@
+<div class="card text-white bg-secondary mb-3 mt-15" style="width: 18rem;">
+  <div class="card-header" style="text-align: center;">{{ dataInput.name | uppercase}}</div>
+  <div class="card-body bg-dark">
+    <img *ngIf="dataInput.name == 'Essos' " class="card-img-top img-fluid" src="./assets/images/essos.PNG"/>
+    <img *ngIf="dataInput.name == 'Sothoryos' " class="card-img-top img-fluid" src="./assets/images/sothoryos.PNG"/>
+    <img *ngIf="dataInput.name == 'Ulthos' " class="card-img-top img-fluid" src="./assets/images/ulthos.PNG"/>
+    <img *ngIf="dataInput.name == 'Westeros' " class="card-img-top img-fluid" src="./assets/images/westeros.PNG"/>
+  </div>
+</div>

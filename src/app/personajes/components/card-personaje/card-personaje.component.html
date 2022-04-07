@@ -1,10 +1,11 @@
 <div class="card text-white bg-secondary mb-3 mt-15" style="width: 18rem;">
-  <div class="card-header" style="text-align: center;">{{ dataInput.fullName }}</div>
+  <div class="card-header" style="text-align: center;">{{ dataInput.fullName | uppercase}}</div>
   <div class="card-body bg-dark">
-    <img class="card-img-top img-fluid" [src]="dataInput.imageUrl" />
+    <img class="card-img-top img-fluid" [src]="dataInput.imageUrl"/>
   </div>
   <div class="card-footer">
-    <button class="btn btn-primary" style="margin: 1rem; align-items: flex-start;">Ver detalle</button>
+    <button class="btn btn-primary" style="margin: 1rem; align-items: flex-start;" (click)="verDetalles()">Ver detalle</button>
     <button class="btn btn-primary" style="margin: 1rem; align-items: flex-end;">Editar</button>
   </div>
 </div>
+

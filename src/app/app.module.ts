@@ -7,6 +7,9 @@ import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { AuthModule } from '@auth0/auth0-angular';
 import { HttpClientModule } from '@angular/common/http';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,6 +25,9 @@ import { HttpClientModule } from '@angular/common/http';
       domain: 'dev-e3yg15mc.us.auth0.com',
       clientId: 'FvSiOoCjEEZAWbK9VYykOUBTQEFX7QFq'
     }),
+    NgbModule,
+    ReactiveFormsModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
