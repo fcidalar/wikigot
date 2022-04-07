@@ -1,7 +1,29 @@
 <div class="container mt-15">
-<div class="card-group">
-  <app-card-personaje  (selectedPersonaje)="modalDetallePersonaje.verModalDetallePersonaje($event)"  [dataInput]="personaje" *ngFor="let personaje of personajes;"></app-card-personaje>
-</div>
+  <br>
+  <form [formGroup]="buscadorForm" (submit)="buscar()">
+    <div class="form-group g-3 row">
+        <div class="col-md-2">
+          <label class="col-form-label">Filtrar por nombre: </label>
+       </div>
+        <div class="col-md-5">
+            <input type="text" class="form-control" name="fullName" formControlName="fullName">
+        </div>
+        <div class="col-md-1">
+            <button [disabled]="buscadorForm.invalid" type="submit" class="btn btn-secondary">
+                Buscar
+            </button>
+        </div>
+        <div class="col-md-2">
+          <button class="btn btn-secondary" (click)="reestablecerFiltros()">
+              Reestablecer Filtro
+          </button>
+      </div>
+    </div>
+  </form>
+  <br>
+  <div class="row row-cols-3 row-cols-md-3 g-4">
+    <app-card-personaje  (selectedPersonaje)="modalDetallePersonaje.verModalDetallePersonaje($event)"  [dataInput]="personaje" *ngFor="let personaje of personajes;"></app-card-personaje>
+  </div>
 </div>
 <app-detalles-personaje #modalDetallePersonaje></app-detalles-personaje>
 
