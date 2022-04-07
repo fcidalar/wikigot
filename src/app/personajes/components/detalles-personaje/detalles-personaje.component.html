@@ -8,34 +8,36 @@
             </div>
             <div class="card-body">
               <img class="card-img-top img-fluid" [src]="personaje.imageUrl"/>
-              <form autocomplete="off" >
+            </div>
+            <div class="card-footer">
+              <form autocomplete="off">
 
                 <div class="form-group row">
-                    <label class="col-2 col-form-label">Nombre</label>
+                    <label class="col-4 col-form-label">Nombre:</label>
                     <div class="col-8">
                         <input
                         type="text"
-                        placeholder="personaje.firstName"
+                        placeholder={{personaje.firstName}}
                         formControlName="nombre">
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label class="col-2 col-form-label">Apellido</label>
+                    <label class="col-4 col-form-label">Apellido:</label>
                     <div class="col-8">
-                        <input type="text" placeholder="personaje" formControlName="apellido">
+                        <input type="text" placeholder={{personaje.lastName}} formControlName="apellido">
                     </div>
                 </div>
 
                 <div class="form-group row">
-                    <label class="col-2 col-form-label">Título</label>
+                    <label class="col-4 col-form-label">Título:</label>
                     <div class="col-8">
-                        <input type="text" placeholder="Título" formControlName="titulo">
+                        <input type="text" placeholder={{personaje.title}} formControlName="titulo">
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label class="col-2 col-form-label">Familia</label>
+                    <label class="col-4 col-form-label">Familia:</label>
                     <div class="col-8">
-                        <input type="text" placeholder="Familia" formControlName="familia">
+                        <input type="text" placeholder={{personaje.family}} formControlName="familia">
                     </div>
                 </div>
             </form>

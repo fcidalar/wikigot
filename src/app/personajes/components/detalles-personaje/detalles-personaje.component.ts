@@ -43,7 +43,7 @@ export class DetallesPersonajeComponent implements OnInit {
     console.log("Personaje recibido: ", personajeRecibido);
     this.personaje = personajeRecibido;
     this.modalService.open(this.modalDetallePersonaje, {
-      size: "xl",
+      size: "md",
       backdrop: "static",
       keyboard: false,
     });
